@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Serif+KR:wght@400;600&display=swap');
+
+:root {
+  --paper: #f3f0e9;
+  --ink: #171715;
+  --muted: #77736b;
+  --line: #c9c4b9;
+  --accent: #b24b32;
+  --max: 1240px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+button, textarea { font: inherit; }
+a { color: inherit; }
+img { display: block; width: 100%; }
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: min(calc(100% - 48px), var(--max));
+  margin: 0 auto;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; gap: 12px; align-items: baseline; text-decoration: none; font-weight: 600; letter-spacing: .08em; }
+.brand small { color: var(--muted); font-size: .66rem; font-weight: 500; letter-spacing: .16em; }
+nav { display: flex; gap: 30px; font-size: .78rem; text-transform: uppercase; letter-spacing: .11em; }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 76vh;
+  width: min(calc(100% - 48px), var(--max));
+  margin: 0 auto;
+  padding: 54px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+.eyebrow { margin: 0; color: var(--accent); font-size: .72rem; font-weight: 600; letter-spacing: .15em; }
+.hero .eyebrow { grid-column: 1 / -1; }
+.hero h1 {
+  align-self: end;
+  margin: 0;
+  font-size: clamp(5rem, 12.5vw, 10.5rem);
+  font-weight: 500;
+  line-height: .79;
+  letter-spacing: -.075em;
+}
+.hero-copy { align-self: end; max-width: 370px; margin-left: auto; padding-bottom: 6px; }
+.hero-copy p { margin: 0 0 34px; font-family: "Noto Serif KR", serif; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.9; }
+.text-link { display: inline-flex; gap: 28px; padding-bottom: 4px; border-bottom: 1px solid var(--ink); text-decoration: none; font-size: .8rem; font-weight: 600; letter-spacing: .06em; }
+
+.exhibition { width: min(calc(100% - 48px), var(--max)); margin: 0 auto; padding: 150px 0 100px; }
+.frame { width: 61%; margin: 0 0 180px; }
+.frame:nth-child(even) { margin-left: auto; }
+.frame-portrait { width: 40%; }
+.frame-narrow { width: 34%; }
+.frame-offset { margin-left: 8%; }
+.frame-shift { margin-right: 10%; }
+.frame-final { width: 42%; margin: 40px auto 90px; }
+.photo-button { display: block; width: 100%; padding: 0; overflow: hidden; border: 0; background: #ddd7cc; cursor: zoom-in; }
+.photo-button img { transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.photo-button:hover img { transform: scale(1.015); filter: contrast(1.025); }
+.photo-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.caption { display: grid; grid-template-columns: 56px 1fr; gap: 14px; margin-top: 20px; padding-top: 13px; border-top: 1px solid var(--line); }
+.caption .number { color: var(--accent); font-size: .76rem; font-weight: 600; letter-spacing: .08em; }
+.caption h2 { margin: 0; font-family: "Noto Serif KR", serif; font-size: 1.18rem; font-weight: 600; }
+.caption p { margin: 4px 0 0; color: var(--muted); font-family: "Noto Serif KR", serif; font-size: .88rem; }
+
+.notes { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(420px, 1.3fr); gap: 80px; width: min(calc(100% - 48px), 1040px); margin: 0 auto; padding: 130px 0; border-top: 1px solid var(--line); }
+.notes-heading h2 { margin: 18px 0 10px; font-family: "Noto Serif KR", serif; font-size: 2.5rem; font-weight: 500; }
+.notes-heading > p:last-child { color: var(--muted); font-family: "Noto Serif KR", serif; }
+.comments { border-top: 1px solid var(--ink); }
+.comment { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.avatar { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: white; font-size: .72rem; font-weight: 600; }
+.comment-meta { display: flex; justify-content: space-between; gap: 15px; font-size: .8rem; }
+.comment-meta strong { letter-spacing: .02em; }
+.comment-meta time { color: var(--muted); font-size: .7rem; }
+.comment-body p { margin: 9px 0 12px; font-family: "Noto Serif KR", serif; font-size: .92rem; }
+.comments-state { padding: 28px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-family: "Noto Serif KR", serif; font-size: .9rem; }
+
+footer { display: flex; justify-content: space-between; width: min(calc(100% - 48px), var(--max)); margin: 0 auto; padding: 28px 0 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: .7rem; letter-spacing: .08em; }
+footer p { margin: 0; }
+footer a { text-decoration: none; }
+
+.lightbox { width: min(92vw, 1180px); max-height: 92vh; padding: 0; border: 0; background: transparent; color: white; overflow: visible; }
+.lightbox::backdrop { background: rgba(10,10,9,.92); backdrop-filter: blur(8px); }
+.lightbox img { max-height: 82vh; object-fit: contain; }
+.lightbox p { margin: 12px 0 0; font-family: "Noto Serif KR", serif; text-align: center; }
+.lightbox-close { position: fixed; top: 18px; right: 24px; width: 44px; height: 44px; border: 0; background: transparent; color: white; font-size: 2rem; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .site-header, .hero, .exhibition, footer { width: min(calc(100% - 30px), var(--max)); }
+  .site-header { padding: 20px 0; }
+  .brand small { display: none; }
+  nav { gap: 16px; font-size: .66rem; }
+  .hero { display: block; min-height: auto; padding: 42px 0 74px; }
+  .hero h1 { margin: 90px 0 45px; font-size: clamp(4rem, 23vw, 7rem); }
+  .hero-copy { margin: 0; }
+  .exhibition { padding-top: 90px; }
+  .frame, .frame-portrait, .frame-narrow, .frame-final { width: 100%; margin: 0 0 100px; }
+  .frame-offset, .frame-shift { margin-left: 0; margin-right: 0; }
+  .caption { grid-template-columns: 42px 1fr; }
+  .notes { display: block; width: min(calc(100% - 30px), 1040px); padding: 90px 0; }
+  .comments { margin-top: 55px; }
+  footer { gap: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .photo-button img { transition: none; }
+}

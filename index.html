@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CHANG의 일상 사진 아카이브, Seven Frames.">
+  <title>SEVEN FRAMES — CHANG</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Seven Frames 처음으로">
+      <span>CHANG</span>
+      <small>PHOTO ARCHIVE</small>
+    </a>
+    <nav aria-label="주요 메뉴">
+      <a href="#exhibition">Exhibition</a>
+      <a href="#notes">Notes</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">ONLINE EXHIBITION · 01—07</p>
+      <h1 id="hero-title">SEVEN<br>FRAMES</h1>
+      <div class="hero-copy">
+        <p>지나가다 잠시 멈춘 장면들.<br>아무 일도 없었던 것처럼 남은 일곱 개의 기록.</p>
+        <a class="text-link" href="#exhibition">전시 보기 <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="exhibition" id="exhibition" aria-label="사진 전시">
+      <article class="frame frame-portrait">
+        <button class="photo-button" type="button" data-image="frame_1.jpg" data-title="경계의 오후" aria-label="1번 사진 크게 보기">
+          <img src="frame_1.jpg" alt="벽돌 건물 앞 자동차 위에 앉은 고양이" loading="eager">
+        </button>
+        <div class="caption">
+          <span class="number">01</span>
+          <div><h2>경계의 오후</h2><p>낯선 시선과 잠깐 마주친 골목.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-wide">
+        <button class="photo-button" type="button" data-image="frame_2.jpg" data-title="불빛의 지도" aria-label="2번 사진 크게 보기">
+          <img src="frame_2.jpg" alt="밤의 도시와 강을 내려다본 풍경" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">02</span>
+          <div><h2>불빛의 지도</h2><p>멀리서 바라보면 모든 길이 이어진다.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-wide frame-offset">
+        <button class="photo-button" type="button" data-image="frame_3.jpg" data-title="오래된 간판" aria-label="3번 사진 크게 보기">
+          <img src="frame_3.jpg" alt="눈 쌓인 거리의 오래된 상점" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">03</span>
+          <div><h2>오래된 간판</h2><p>시간이 멈춘 듯한 겨울의 가게.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-portrait frame-narrow">
+        <button class="photo-button" type="button" data-image="frame_4.jpg" data-title="작은 통과" aria-label="4번 사진 크게 보기">
+          <img src="frame_4.jpg" alt="젖은 아스팔트 위를 지나가는 작은 민달팽이" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">04</span>
+          <div><h2>작은 통과</h2><p>느린 움직임이 가장 오래 남는 날.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-portrait">
+        <button class="photo-button" type="button" data-image="frame_5.jpg" data-title="머리 위의 경로" aria-label="5번 사진 크게 보기">
+          <img src="frame_5.jpg" alt="건물과 전선 사이를 날아가는 새" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">05</span>
+          <div><h2>머리 위의 경로</h2><p>도시는 올려다볼 때 다른 모양이 된다.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-portrait frame-shift">
+        <button class="photo-button" type="button" data-image="frame_6.jpg" data-title="도시의 관찰자" aria-label="6번 사진 크게 보기">
+          <img src="frame_6.jpg" alt="돌바닥 위에 서 있는 검은 까마귀" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">06</span>
+          <div><h2>도시의 관찰자</h2><p>누가 누구를 바라보고 있었을까.</p></div>
+        </div>
+      </article>
+
+      <article class="frame frame-portrait frame-final">
+        <button class="photo-button" type="button" data-image="frame_7.png" data-title="봄이 오기 전" aria-label="7번 사진 크게 보기">
+          <img src="frame_7.png" alt="나무와 화단이 있는 조용한 도로 풍경" loading="lazy">
+        </button>
+        <div class="caption">
+          <span class="number">07</span>
+          <div><h2>봄이 오기 전</h2><p>평범한 길에 계절이 먼저 도착했다.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="notes" id="notes" aria-labelledby="notes-title">
+      <div class="notes-heading">
+        <p class="eyebrow">VISITOR NOTES</p>
+        <h2 id="notes-title">방명록</h2>
+        <p>이 전시에 남겨진 짧은 기록들.</p>
+      </div>
+
+      <div class="comments" id="comments" aria-live="polite" aria-label="방명록 댓글">
+        <p class="comments-state">댓글을 불러오는 중입니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CHANG PHOTO ARCHIVE</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog class="lightbox" aria-label="사진 크게 보기">
+    <button class="lightbox-close" type="button" aria-label="닫기">×</button>
+    <img src="" alt="">
+    <p></p>
+  </dialog>
+</body>
+</html>
